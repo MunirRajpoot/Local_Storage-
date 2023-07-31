@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" /> -->
+
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div>
+    <header class="head">
+      <h1>Local Storage Assignment</h1>
+    </header>
+
+    <!-- Main -->
+    <div class="head2">
+      <h3>User Details</h3>
+    </div>
+
+    <!-- SCREEN AREA. -->
+    <div class="screen">
+      <!-- Hidden Features -->
+      <!-- Generate List` -->
+      <table id="tableSec" class="hidden">
+        <thead>
+          <th>Sr.No</th>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Password</th>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
+
+      <!-- Form Section -->
+      <form id="addUser" class="hidden">
+        <fieldset>
+          <legend>Add User:</legend>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required placeholder="Enter your name..." />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" name="city" id="address" required placeholder="Enter your City" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Enter your email..." />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required placeholder="Enter your password..." />
+          </div>
+          <div class="form-group">
+            <button id="signup" onclick="save()">Save</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Delete User -->
+      <form id="deleteuser" class="hidden">
+        <fieldset class="delete">
+          <legend>Delete User:</legend>
+          <div class="form-group">
+            <label for="userId" style="font-size: larger">User Id:</label>
+            <input type="number" name="userId" id="userId" required placeholder="Enter Your Id..." />
+          </div>
+          <div class="form-group">
+            <button id="deleteBtn" onclick="deleteUser()">Delete</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Login Form -->
+
+      <form action="login" id="logInForm" class="hidden">
+        <fieldset class="login">
+          <legend style="margin-top: 10px; margin-left: 18px">Login</legend>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Enter Your Email..." />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required placeholder="Enter Your Password..." />
+          </div>
+          <div class="form-group">
+            <button id="LogInBtn" onclick="logIn()">LogIn</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Update Form -->
+      <form action="UpdateForm" id="updateFormSec" class="hidden">
+        <fieldset class="updateForm">
+          <legend>Updation Form:</legend>
+          <div class="form-group">
+            <label for="userId">UserId:</label>
+            <input type="number" name="userId" id="updateUserId" required placeholder="Enter your Id..." />
+          </div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="updateName" id="name" required placeholder="Enter your Name..." />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" name="city" id="updateCity" required placeholder="Enter your city..." />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="updateEmail" required placeholder="Enter your Email..." />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="updatePassword" required placeholder="Enter your Password..." />
+          </div>
+          <div class="form-group">
+            <button id="updateBtn" onclick="update()">Update</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Result Section -->
+      <div class="result-area" id="result-area">
+        <div class="result">
+          <p id="textSec">Press Button To Perform Action....</p>
+        </div>
+      </div>
+      <!-- BUTTON SECTION. -->
+      <div class="button-group">
+        <button type="button" class="btn btn-lg" onclick="generateList()">Generate Users List</button>
+        <button type="button" class="btn btn-lg" onclick="toggle()">Add User/Sign Up</button>
+        <button type="button" class="btn btn-lg" onclick="toggle3()">Delete users</button>
+        <button type="button" class="btn btn-lg" id="logInButton" onclick="toggle1()">LogIn</button>
+        <button type="button" class="btn btn-lg hidden" id="logOutBtn" onclick="toggle5()">LogOut</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="./brain.js"></script>
+</body>
+
+</html>

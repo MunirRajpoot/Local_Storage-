@@ -1,0 +1,202 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+
+}
+
+.head {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.screen{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    /* display: flex; */
+    justify-content: space-between;
+    gap: 15px;
+}
+.head h1 {
+    text-align: center;
+    color: rgb(56, 56, 52);
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    border: 3px solid rgb(224, 227, 35);
+    width: 525px;
+    height: 70px;
+    font-weight: bold;
+}
+
+.head2 {
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top:2px dotted black; */
+}
+
+.head2 h3 {
+    text-align: center;
+    color: rgb(28, 28, 23);
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    border: 3px solid rgb(224, 227, 35);
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.result-area {
+    width: 65%;
+    /* border: 1px solid black; */
+    display: flex;
+    height: 450px;
+}
+
+.result {
+    /* border: 1px solid black; */
+    /* width: 70%; */
+    padding: 20px;
+    margin-top: 9px;
+}
+
+#textSec {
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    gap: 10px;
+    justify-content: center;
+    border: 5px solid rgb(33, 33, 32);
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    height: 330px;
+    margin-top: 30px;
+
+}
+
+.button-group button {
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    color: rgb(38, 37, 37);
+    font-weight: bold;
+    margin: 6px;
+}
+
+#tableSec {
+    border: 1px solid black;
+    margin-left: 5px;
+}
+
+th {
+    padding: 5px;
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    border: 1px solid black;
+    width: 100px;
+    /* height: 100px; */
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 100px;
+    /* height: 100px; */
+
+}
+
+.hidden {
+    display: none;
+}
+
+/* .addUser {
+} */
+
+fieldset {
+    border: 1px solid black;
+    background: linear-gradient(to right, #f3ef35, #424341);
+    margin-left: 23px;
+    width: 350px;
+    border-radius: 2%;
+    height: 370px;
+}
+
+legend {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    /* padding: 5px; */
+}
+
+label {
+    font-weight: bold;
+    font-size: large;
+    display: block;
+}
+
+input {
+    width: 270px;
+    /* border-radius: 5%; */
+}
+
+.form-group {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#signup {
+    width: 270px;
+    height: 40px;
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    font-weight: bold;
+    font-size: larger;
+
+}
+
+.delete {
+    height: 200px;
+}
+
+.login {
+    height: 280px;
+}
+
+.updateForm {
+    height: 450px;
+}
+
+#deleteBtn {
+    width: 270px;
+    height: 40px;
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    font-weight: bold;
+    font-size: larger;
+}
+
+#LogInBtn {
+    width: 270px;
+    height: 40px;
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    font-weight: bold;
+    font-size: larger;
+}
+
+#updateBtn {
+    width: 270px;
+    height: 40px;
+    background: linear-gradient(to bottom, #f3ef35, #424341);
+    font-weight: bold;
+    font-size: larger;
+}
