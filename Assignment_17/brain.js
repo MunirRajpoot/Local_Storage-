@@ -1,3 +1,4 @@
+
 function toggle() {
     let result = document.getElementById("result-area");
     let signUp = document.getElementById("addUser");
@@ -5,24 +6,24 @@ function toggle() {
     let table = document.getElementById("tableSec");
     let deleteUser = document.getElementById("deleteuser");
 
-    if (signUp.classlist?.contains("hidden")) {
-        signUp.classList.remove("hidden");
-        login.classList.add("hidden");
-        result.classList.add("hidden");
-        deleteUser.classList.add("hidden");
-        table.classList.add("hidden");
+    if (signUp.classList.contains('hidden')) {
+        signUp.classList.remove('hidden');
+        login.classList.add('hidden');
+        result.classList.add('hidden');
+        deleteUser.classList.add('hidden');
+        table.classList.add('hidden');
     } else {
-        signUp.classList.add("hidden");
-        login.classList.add("hidden");
-        result.classList.remove("hidden");
-        deleteUser.classList.add("hidden");
-        table.classList.add("hidden");
+        signUp.classList.add('hidden');
+        login.classList.add('hidden');
+        deleteUser.classList.add('hidden');
+        table.classList.add('hidden');
+        result.classList.remove('hidden');
     }
 }
 function toggle1() {
     let result = document.getElementById("result-area");
-    let signUp = document.getElementById("addUser");
     let login = document.getElementById("logInForm");
+    let signUp = document.getElementById("addUser");
     let table = document.getElementById("tableSec");
     let deleteUser = document.getElementById("deleteuser");
     let updateForm = document.getElementById("updateFormSec");
@@ -61,7 +62,7 @@ function toggle2() {
     } else {
         login.classList.add("hidden");
         signUp.classList.add("hidden");
-        table.classList.add("hidden");
+        table.classList.remove("hidden");
         deleteUser.classList.add("hidden");
         updateForm.classList.add("hidden");
         result.classList.remove("hidden");
@@ -139,18 +140,19 @@ function toggle6() {
 
 //Local Storage 
 //Function to Geneerate UserId
-// function* generId() {
-//     let i = 1;
-//     while (i < 10);
-//     i++;
-//     yield i;
+function generateUserId() {
+    const characters = '0123456789';
+    const length = 4;
+    let userID = '';
 
-// }
-// let sGen = generId();
-// function generateUserId() {
-//     return sGen.next().value;
-// }
-// generateUserId();
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.random() * characters.length;
+        userID += characters.charAt(randomIndex);
+    }
+
+    return userID;
+}
+generateUserId();
 //Function to Save User data Local Storage Data
 function save() {
     let name = document.getElementById('name').value;
@@ -175,7 +177,7 @@ function save() {
     users.push(user)
     alert("Add User Successfully.");
 
-    localStorage.setItem('users', JSON.stringify('users'));
+    localStorage.setItem('users', JSON.stringify(users));
     document.getElementById('name').value = '';
     document.getElementById('address').value = '';
     document.getElementById('email').value = '';
@@ -186,7 +188,7 @@ function save() {
 //Function to update the table with user data from local storage
 
 function generateList() {
-    let tableBody = document.querySelector('#table tbody');
+    let tableBody = document.querySelector('#tableSec tbody');
     tableBody.innerHTML = '';
     let users = JSON.parse(localStorage.getItem('users'));
 
